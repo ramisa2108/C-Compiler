@@ -20,7 +20,6 @@ int line_count = 1;
 int start_line = 0;
 int string_comment_start_line = 0;
 int error_count = 0;
-int scope_count = 0;
 int offset = 0;
 string str;
 string lexeme;
@@ -243,13 +242,13 @@ ESCAPE \\t|\\n|\\\\|\\\'|\\\"|\\a|\\f|\\r|\\b|\\v|\\0
 	}
 	table->enterNewScope();
 	insertParameters();
-	scope_count++;
+	
 	return LCURL; 
 }
 "}" {
 	yylval.si = new symbolInfo(yytext, "RCURL");
 	previous = yylval.si;
-	scope_count--;
+	
 	return RCURL; 
 }
 "=" { 
@@ -356,4 +355,3 @@ ESCAPE \\t|\\n|\\\\|\\\'|\\\"|\\a|\\f|\\r|\\b|\\v|\\0
 	yyerror(msg);
 	
 }
-

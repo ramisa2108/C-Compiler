@@ -1,4 +1,4 @@
-# Compiler-Sessional
+# C-subset-Compiler
 
 Implementation of the front end of a compiler for a subset of _C_ language. 
 

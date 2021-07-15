@@ -4,10 +4,17 @@
 #include "symbolTable.h"
 using namespace std;
 
-int main()
+int main(int argc,char *argv[])
 {
-    freopen("input_1.txt", "r", stdin);
-    freopen("out.txt", "w", stdout);
+
+    if(argc != 2)
+	{
+		cout << "Please provide a file name" << endl;
+		return 0;
+	}
+
+    freopen(argv[1], "r", stdin);
+    freopen("output.txt", "w", stdout);
     int bucketSize;
     cin >> bucketSize;
 

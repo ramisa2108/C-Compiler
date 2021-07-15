@@ -1,0 +1,7 @@
+I name, type ==> Insert symbol (name, type) into the current scope table.
+L name ==> Lookup a symbol in the symbol table.
+D name ==> Delete a symbol from symbol table.
+P 'A' ==> Print the all the scope tables currently in the symbol table.
+P 'C' ==> Print the current scope table. 
+S ==> Enter a new scope table.
+E ==> Exit from the current scope table.

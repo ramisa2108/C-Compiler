@@ -14,7 +14,6 @@ extern int error_count;
 extern int line_count;
 extern int start_line;
 extern int string_comment_start_line;
-extern int scope_count;
 extern int offset;
 
 int label_count = 0;
@@ -676,8 +675,6 @@ parameter_list: 	parameter_list COMMA type_specifier ID
 				
 				
 				
-				//parametersListSymbols.push_back($4);
-				//paramTypes.push_back($3->typeSpecifier);
 				
 				logRule("parameter_list","parameter_list COMMA type_specifier ID");
 				logPattern($$);
@@ -697,7 +694,6 @@ parameter_list: 	parameter_list COMMA type_specifier ID
 				$1->addNextChild($2);
 				$1->addNextChild($3);
 				
-				//paramTypes.push_back($3->typeSpecifier);
 				
 				logRule("parameter_list","parameter_list COMMA type_specifier");
 				logPattern($$);
@@ -721,9 +717,6 @@ parameter_list: 	parameter_list COMMA type_specifier ID
 				
 				
 				
-				//parametersListSymbols.push_back($2);
-				//paramTypes.clear();
-				//paramTypes.push_back($1->typeSpecifier);
 				
 				logRule("parameter_list","type_specifier ID");
 				logPattern($$);
@@ -741,8 +734,6 @@ parameter_list: 	parameter_list COMMA type_specifier ID
 				$$->addNextChild($1);
 				
 				
-				//paramTypes.clear();
-				//paramTypes.push_back($1->typeSpecifier);
 				
 				logRule("parameter_list","type_specifier");
 				logPattern($$);
@@ -771,9 +762,6 @@ parameter_list: 	parameter_list COMMA type_specifier ID
 				yyerrok;
 				
 				
-				//parametersListSymbols.push_back($2);
-				//paramTypes.clear();
-				//paramTypes.push_back($1->typeSpecifier);
 				
 				logPattern($$);
 				
@@ -799,8 +787,6 @@ parameter_list: 	parameter_list COMMA type_specifier ID
 				yyerrok;
 				
 				
-				//parametersListSymbols.push_back($4);
-				//paramTypes.push_back($3->typeSpecifier);
 				
 				logRule("parameter_list","parameter_list COMMA type_specifier ID");
 				logPattern($$);
